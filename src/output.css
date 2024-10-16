@@ -641,10 +641,6 @@ body{
   margin-top: 50px;
 }
 
-.inline-block{
-  display: inline-block;
-}
-
 .flex{
   display: flex;
 }
@@ -674,10 +670,6 @@ body{
   width: 2rem;
 }
 
-.w-\[200\%\]{
-  width: 200%;
-}
-
 .w-\[530px\]{
   width: 530px;
 }
@@ -703,25 +695,18 @@ body{
   width: 100%;
 }
 
-.w-\[300\]{
-  width: 300;
-}
-
-.w-\[300\%\]{
-  width: 300%;
+.w-max{
+  width: -moz-max-content;
+  width: max-content;
 }
 
 .max-w-\[530px\]{
   max-width: 530px;
 }
 
-.shrink-0{
-  flex-shrink: 0;
-}
-
-@keyframes infinite-scroll{
+@keyframes slide{
   0%{
-    transform: translateX(0);
+    transform: translateX(0%);
   }
 
   100%{
@@ -729,8 +714,8 @@ body{
   }
 }
 
-.animate-infinite-scroll{
-  animation: infinite-scroll 2s linear infinite;
+.animate-\[slide_50s_linear_infinite\]{
+  animation: slide 50s linear infinite;
 }
 
 .list-none{
@@ -753,6 +738,10 @@ body{
   flex-wrap: wrap;
 }
 
+.flex-nowrap{
+  flex-wrap: nowrap;
+}
+
 .items-center{
   align-items: center;
 }
@@ -771,6 +760,10 @@ body{
 
 .gap-\[70px\]{
   gap: 70px;
+}
+
+.gap-\[7\]{
+  gap: 7;
 }
 
 .-space-x-\[6px\] > :not([hidden]) ~ :not([hidden]){
@@ -813,12 +806,6 @@ body{
   --tw-space-x-reverse: 0;
   margin-right: calc(6px * var(--tw-space-x-reverse));
   margin-left: calc(6px * calc(1 - var(--tw-space-x-reverse)));
-}
-
-.space-x-\[70px\] > :not([hidden]) ~ :not([hidden]){
-  --tw-space-x-reverse: 0;
-  margin-right: calc(70px * var(--tw-space-x-reverse));
-  margin-left: calc(70px * calc(1 - var(--tw-space-x-reverse)));
 }
 
 .space-y-1 > :not([hidden]) ~ :not([hidden]){
@@ -981,6 +968,18 @@ body{
   padding-bottom: 70px;
 }
 
+.pl-5{
+  padding-left: 1.25rem;
+}
+
+.pl-\[\]{
+  padding-left: ;
+}
+
+.pl-\[70px\]{
+  padding-left: 70px;
+}
+
 .text-center{
   text-align: center;
 }
@@ -1075,7 +1074,7 @@ body{
 @font-face {
   font-family: "Clash Display";
 
-  src: url("../public/fonts/ClashDisplay-Semibold.otf");
+  src: url("./fonts/ClashDisplay-Semibold.otf");
 }
 
 .hover\:text-black:hover{

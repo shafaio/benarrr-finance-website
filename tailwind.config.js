@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./dist/**/*.{html,js}"],
+  content: ["./src/**/*.{html,js}"],
   theme: {
     extend: {
       container: {
@@ -19,13 +19,22 @@ module.exports = {
         clash: ["Clash Display"],
       },
       keyframes: {
-        "infinite-scroll": {
-          "0%": { transform: "translateX(0)" },
+        slide: {
+          "0%": { transform: "translateX(0%)" },
           "100%": { transform: "translateX(-100%)" },
         },
-      },
-      animation: {
-        "infinite-scroll": "infinite-scroll 2s linear infinite",
+        slideToR: {
+          "0%": { transform: "translateX(-100%)" },
+          "100%": { transform: "translateX(0%)" },
+        },
+        slideToT: {
+          "0%": { transform: "translateY(0%)" },
+          "100%": { transform: "translateY(-100%)" },
+        },
+        slideToB: {
+          "0%": { transform: "translateY(-100%)" },
+          "100%": { transform: "translateY(0%)" },
+        },
       },
       boxShadow: {
         custom: "0 0 50px -2px rgba(5, 7, 41, 0.11)",
