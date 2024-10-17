@@ -5,7 +5,7 @@
 
 @font-face {
   font-family: "Clash Display";
-  src: url("./fonts/ClashDisplay-Semibold.otf");
+  src: url("./assets/fonts/ClashDisplay-Semibold.otf");
 }
 
 @layer base {
